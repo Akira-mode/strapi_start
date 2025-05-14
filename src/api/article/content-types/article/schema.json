@@ -21,7 +21,9 @@
     "coverImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "publishDate": {
       "type": "date"
@@ -35,6 +37,12 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "article"
     }
   }
 }
